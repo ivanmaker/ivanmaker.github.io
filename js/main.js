@@ -1,47 +1,97 @@
-// These functions open and close the contact form
-function openForm() {
-    document.getElementById("myForm").style.display = "block";
+const modal = document.getElementById('contact-modal');
+const openButtons = document.querySelectorAll('[data-open-contact]');
+const closeButtons = document.querySelectorAll('[data-close-contact]');
+const yearTarget = document.getElementById('year');
+
+if (yearTarget) {
+    yearTarget.textContent = new Date().getFullYear();
 }
 
-function closeForm() {
-    document.getElementById("myForm").style.display = "none";
+function openContactModal() {
+    if (!modal) return;
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
 }
 
-// This function displays the first image in the slideshow when the page loads
-var slideIndex = 1;
-showSlides(slideIndex);
-
-// This function changes the slide when the left or right arrows are clicked
-function plusSlides(n) {
-    showSlides(slideIndex += n);
+function closeContactModal() {
+    if (!modal) return;
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
 }
 
-// This function changes the slide when the dots are clicked
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
+openButtons.forEach((button) => {
+    button.addEventListener('click', openContactModal);
+});
 
+closeButtons.forEach((button) => {
+    button.addEventListener('click', closeContactModal);
+});
 
-function showSlides(n) {
-    var slides = document.getElementsByClassName("mySlides"); // This takes all elements with the class name "mySlides" and stores them in the variable array "slides"
-    var dots = document.getElementsByClassName("dot"); // This takes all elements with the class name "dot" and stores them in the variable array "dots"
-    if (n > slides.length) {slideIndex = 1}; // If n (the number passed into the function) is greater than the length of the array "slides", the slideIndex is set to 1
-    if (n < 1) {slideIndex = slides.length}; // If n (the number passed into the function) is less than 1, te slideIndex is set to the length of the array "slides"
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none"; // This for loop takes each item in the array "slides" and sets the display to none
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        closeContactModal();
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", ""); // This for loop takes each item in the array "dots" and removes "active" which removes the active styling
-    }
-    slides[slideIndex - 1].style.display = "block"; // This displays the image in the slideshow
-    dots[slideIndex - 1].className += " active"; // This adds the active styling to the dot associated with the image
+});
+
+const slides = Array.from(document.querySelectorAll('.slide'));
+const dots = Array.from(document.querySelectorAll('.dot'));
+const prevButton = document.querySelector('[data-carousel-prev]');
+const nextButton = document.querySelector('[data-carousel-next]');
+
+let currentIndex = 0;
+let autoRotate;
+
+function renderSlide(index) {
+    slides.forEach((slide, slideIndex) => {
+        slide.classList.toggle('is-active', slideIndex === index);
+    });
+
+    dots.forEach((dot, dotIndex) => {
+        dot.classList.toggle('is-active', dotIndex === index);
+        dot.setAttribute('aria-pressed', String(dotIndex === index));
+    });
+
+    currentIndex = index;
 }
 
-// This code will create close the contact form when the user clicks off of it
-// The first step is to add an event listener for any clicks on the website
-document.addEventListener("click", function(event){
-    // Here we state that if the click happens on the cancel button OR anywhere that is not the contact form AND the click does not happen on any element with the contact class then call the closeForm() function
-    if (event.target.matches(".cancel") || !event.target.closest(".form-popup") && !event.target.closest(".Pop_Up_Button") && !event.target.closest(".contact")){
-        closeForm()
-    }
-}, false )
+function goToSlide(index) {
+    const nextIndex = (index + slides.length) % slides.length;
+    renderSlide(nextIndex);
+}
+
+function startAutoRotate() {
+    if (slides.length < 2) return;
+
+    clearInterval(autoRotate);
+    autoRotate = setInterval(() => {
+        goToSlide(currentIndex + 1);
+    }, 6000);
+}
+
+if (slides.length) {
+    renderSlide(0);
+    startAutoRotate();
+}
+
+if (prevButton) {
+    prevButton.addEventListener('click', () => {
+        goToSlide(currentIndex - 1);
+        startAutoRotate();
+    });
+}
+
+if (nextButton) {
+    nextButton.addEventListener('click', () => {
+        goToSlide(currentIndex + 1);
+        startAutoRotate();
+    });
+}
+
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        goToSlide(index);
+        startAutoRotate();
+    });
+});

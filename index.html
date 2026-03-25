@@ -1,166 +1,249 @@
 <!DOCTYPE html>
-<html>
-    
-    <!-- Head -->
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width" />
-        <title>Isaac Vazquez III Portfolio</title>
-        <link rel="shortcut icon" type="img/jpg" href="images/icon.png">
-        <link rel="stylesheet" type="text/css" href="stylesheet/sample_portfolio.css">
-    </head>
+<html lang="en">
 
-    <!-- Body -->
-    <body class="Background">   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio site for Isaac Vazquez III featuring front-end projects, growing full-stack skills, and contact information.">
+    <title>Isaac Vazquez III | Developer Portfolio</title>
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-        <!-- Navbar -->
-        <div class="Navbar">
-            <a class="active" href="#Home">Home</a>
-            <!-- New section added -->
-            <a href="#Slideshow">Slideshow</a>
-            <a href="#About">About</a>
-            <a href="#GitHub">GitHub</a>
-            <!-- Onclick and ondblclick functions added to open and close the contact form -->
-            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
-        </div>
+<body>
+    <header class="site-header" id="top">
+        <nav class="navbar container" aria-label="Primary navigation">
+            <a class="brand" href="#">Isaac Vazquez III</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#work">Work</a>
+                <a href="#github">GitHub</a>
+                <button class="nav-contact" type="button" data-open-contact>Contact</button>
+            </div>
+        </nav>
+    </header>
 
-        <!-- Background video -->
-        <div id="Home">
-            <video autoplay muted loop id="Trees_Video">
+    <main>
+        <section class="hero" id="home">
+            <video class="hero-video" autoplay muted loop playsinline aria-hidden="true">
                 <source src="images/video/trees-background.mp4" type="video/mp4">
-                <!-- Display message if video fails to run -->
-                Your browser does not support HTML5 video.
             </video>
-        </div>
+            <div class="hero-overlay"></div>
 
-        <!-- Video text -->
-        <div class="Video_Text">
-            <h1 class="white-text">Isaac Vazquez III</h1>
-            <strong>
-                <p class="center">
-                    <q>Any sufficiently advanced technology is indistinguishable from magic.
-                    </q>
-                    <br> -Arthur C. Clarke<br>
-                    <br>
-                    My name is Isaac. Welcome to my portfolio website. On it, I will tell you about my background and experience.
-                    <br>
-                    <br>Thank you for stopping by and enjoy! 
+            <div class="hero-content container">
+                <p class="eyebrow">Developer portfolio</p>
+                <h1>Clean, practical web work with a strong eye for structure and presentation.</h1>
+                <p class="hero-copy">
+                    I'm Isaac Vazquez III, a developer building responsive projects with HTML, CSS, JavaScript, Python,
+                    SQL, and C# foundations.
+                    I'm early in my software career, but I care a lot about readable code, thoughtful layout, and making
+                    things feel polished.
                 </p>
-            </strong>
-        </div>
-
-        <!-- Slideshow section added -->
-        <div id="Slideshow">
-            <div id="Slideshow_Background"> 
-                <div id="Slideshow_Container">
-                    <!-- Slide 1 of 6 -->
-                    <div class="mySlides fade">
-                        <img class="Slideshow_Images" src="images/Isaac.jpg" alt="It's me Isaac!">
-                        <div class="text">I'm available to assist you on your project!</div>
-                    </div>
-                    <!-- Slide 2 of 6 -->
-                    <div class="mySlides fade">
-                        <img class="Slideshow_Images" src="images/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS, and JS logos"> 
-                        <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
-                    </div>
-                    <!-- Slide 3 of 6 -->
-                    <div class="mySlides fade">
-                        <img class="Slideshow_Images" src="images/Python.png" alt="Python logo">
-                        <div class="text">the popular programming language Python,</div>
-                    </div>
-                    <!-- Slide 4 of 6 -->
-                    <div class="mySlides fade">
-                        <img class="Slideshow_Images" src="images/C_Sharp_and_Dot_NET.png" alt="C# logo">
-                        <div class="text">C#, .NET Framework, ASP.NET, MVC, </div>
-                    </div>
-                    <!-- Slide 5 of 6 -->
-                    <div class="mySlides fade">
-                        <img class="Slideshow_Images" src="images/SQL_and_Database.jpg" alt="SQL logo"> 
-                        <div class="text">back end development, databases and SQL.</div>
-                    </div>
-                    <!-- Slide 6 of 6 -->
-                    <div class="mySlides fade">
-                        <img class="Slideshow_Images" src="images/wTilda.jpg" alt="Me with my cat Tilda!"> 
-                        <div class="text"><a class="white-text contact" onclick="openForm()">Contact me now!</a></div> 
-                    </div>
-                    <!-- Previous and next buttons -->
-                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#github">View my work</a>
+                    <button class="button button-secondary" type="button" data-open-contact>Get in touch</button>
                 </div>
-                <br> <!-- Adds a space between the slideshow images and the dots -->
+                <ul class="hero-highlights" aria-label="Highlights">
+                    <li>Responsive front-end projects</li>
+                    <li>Growing full-stack skill set</li>
+                    <li>Detail-oriented and easy to work with</li>
+                </ul>
+            </div>
+        </section>
 
-                <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
-                <div style="text-align: center">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span> 
-                    <span class="dot" onclick="currentSlide(4)"></span> 
-                    <span class="dot" onclick="currentSlide(5)"></span> 
-                    <span class="dot" onclick="currentSlide(6)"></span> 
+        <section class="section" id="about">
+            <div class="container two-column">
+                <div class="content-card">
+                    <p class="section-label">About me</p>
+                    <h2>A grounded builder with real-world leadership experience.</h2>
+                    <p>
+                        Before moving into tech, I spent years doing hands-on work, serving customers, and leading
+                        people. That background still shapes how I approach software: keep it useful, keep it clear, and
+                        keep improving.
+                    </p>
+                    <p>
+                        I'm a graduate of The Tech Academy's JavaScript Developer Boot Camp and I've been building
+                        experience across front-end development, databases, and back-end fundamentals. I enjoy taking a
+                        project from rough idea to something clean, functional, and presentable.
+                    </p>
+                    <p>
+                        Outside of coding, I'm a ceramicist and banjo player. I enjoy gardening and video games.
+                        That balance helps me bring personality to my work without losing professionalism.
+                    </p>
+                </div>
+                <div class="portrait-card">
+                    <img src="images/Isaac.jpg" alt="Portrait of Isaac Vazquez III">
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- About section -->
-        <div class="Row" id="About">
-            <!-- Left column -->
-            <div class="Column_2">
-                <img id="animal" src="images/animal.gif" alt="I love to rock!">
+        <section class="section section-muted" id="skills">
+            <div class="container">
+                <p class="section-label center-text">What I bring</p>
+                <h2 class="section-title center-text">A portfolio that feels capable, not inflated.</h2>
+                <div class="skill-grid">
+                    <article class="info-card">
+                        <h3>Front-end fundamentals</h3>
+                        <p>Responsive layouts, clear visual hierarchy, semantic HTML, CSS organization, and JavaScript
+                            interactions that support the user instead of distracting from the content.</p>
+                    </article>
+                    <article class="info-card">
+                        <h3>Growing technical range</h3>
+                        <p>Comfortable working across HTML, CSS, JavaScript, Python, SQL, and C# while continuing to
+                            strengthen back-end and application-building skills.</p>
+                    </article>
+                    <article class="info-card">
+                        <h3>Professional mindset</h3>
+                        <p>I'm not trying to look senior before I've earned it. I'd rather show solid fundamentals,
+                            steady improvement, and work that feels reliable and thoughtfully made.</p>
+                    </article>
+                </div>
             </div>
-            <!-- Right column -->
-            <div class="Column_1">
-                <h1>About</h1>
-                <p>
-                    I am a software developer who loves to code! As a father of two, I enjoy time with my family and traveling. 
-                    <br>
-                    <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, Python, C# and more. 
-                    <br>
-                    <br>I am a full-stack developer and would love to work with you on your project. <a onclick="openForm()" class="contact">Contact</a> me below!
-                </p>
-            </div>
-        </div>
+        </section>
 
-        <!-- GitHub section -->
-        <div class="Row" id="GitHub">
-            <!-- Left column -->
-            <div class="Column_1">
-                <h1>GitHub</h1>
-                <p>You can view my coding projects on my GitHub profile here:
-                    <br>
-                    <p class="center"><a href="https://github.com/ivanmaker/JAVASCRIPT-PROJECTS" target="_blank">Isaac Vazquez III GitHub</a></p>
-                </p>
-            </div>
-            <!-- Right column -->
-            <div class="Column_2">
-                <a href="https://github.com/the-tech-academy" target="_blank"><img id="pete" src="images/peteW.gif"></a>
-            </div>
-        </div>
+        <section class="section" id="work">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <p class="section-label">Tools and technologies</p>
+                        <h2>Showcase of what I've been working with.</h2>
+                    </div>
+                </div>
 
-        <!-- Contact form -->
-        <div id="Contact">
-           <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
-           <div class="form-popup" id="myForm">
-                <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
-                    <h1>Contact</h1>
-                    <label for="name"><b>Name</b></label>
-                      <input type="text" placeholder="Type your name here" name="name" required>
-                    <label for="phone"><b>Phone</b></label>
-                      <input type="text" placeholder="Type your phone number here" name="phone">
-                    <label for="email"><b>Email</b></label>		
-                      <input type="text" placeholder="Type your email address here" name="email" required>
-                    <label for="message"><b>Message</b></label>
-                      <input type="text" placeholder="Type your message here" name="message">
-         
-                    <button type="submit" class="btn">SUBMIT</button>
-                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
-                </form>
-           </div>
+                <div class="carousel" aria-label="Technology slideshow">
+                    <div class="carousel-track">
+                        <article class="slide is-active">
+                            <img src="images/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS, and JavaScript logos">
+                            <div class="slide-copy">
+                                <h3>HTML, CSS, and JavaScript</h3>
+                                <p>The core tools behind my front-end projects and the part of development where I'm
+                                    currently strongest.</p>
+                            </div>
+                        </article>
+
+                        <article class="slide">
+                            <img src="images/Python.png" alt="Python logo">
+                            <div class="slide-copy">
+                                <h3>Python</h3>
+                                <p>Useful for logic, scripting, and sharpening problem-solving beyond the browser.</p>
+                            </div>
+                        </article>
+
+                        <article class="slide">
+                            <img src="images/C_Sharp_and_Dot_NET.png" alt="C# and .NET logo">
+                            <div class="slide-copy">
+                                <h3>C# and .NET</h3>
+                                <p>Part of my back-end and application-development training as I continue expanding
+                                    beyond front-end work.</p>
+                            </div>
+                        </article>
+
+                        <article class="slide">
+                            <img src="images/SQL_and_Database.jpg" alt="SQL and database graphic">
+                            <div class="slide-copy">
+                                <h3>SQL and databases</h3>
+                                <p>Understanding how data is stored, queried, and structured is a key part of building
+                                    more complete applications.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="carousel-controls">
+                        <button class="carousel-button" type="button" data-carousel-prev
+                            aria-label="Previous slide">&#10094;</button>
+                        <div class="carousel-dots" aria-label="Slide navigation">
+                            <button class="dot is-active" type="button" data-slide="0"
+                                aria-label="Go to slide 1"></button>
+                            <button class="dot" type="button" data-slide="1" aria-label="Go to slide 2"></button>
+                            <button class="dot" type="button" data-slide="2" aria-label="Go to slide 3"></button>
+                            <button class="dot" type="button" data-slide="3" aria-label="Go to slide 4"></button>
+                        </div>
+                        <button class="carousel-button" type="button" data-carousel-next
+                            aria-label="Next slide">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-muted" id="github">
+            <div class="container github-layout">
+                <div class="content-card">
+                    <p class="section-label">GitHub</p>
+                    <h2>See the code behind the projects.</h2>
+                    <p>
+                        My GitHub is where I document what I’m building and what I’m learning. It shows the progression
+                        of my work, not just a polished final result.
+                    </p>
+                    <p>
+                        That matters because I want employers and collaborators to see both: the projects themselves and
+                        the way I think through code.
+                    </p>
+                    <div class="github-actions">
+                        <a class="button button-primary" href="https://github.com/ivanmaker/JAVASCRIPT-PROJECTS"
+                            target="_blank" rel="noreferrer">Open GitHub projects</a>
+                        <button class="button button-secondary" type="button" data-open-contact>Start a
+                            conversation</button>
+                    </div>
+                </div>
+                <div class="image-stack">
+                    <img src="images/wTilda.jpg" alt="Isaac with his cat Tilda">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="contact-strip">
+        <div class="container contact-strip-inner">
+            <div>
+                <p class="section-label">Contact</p>
+                <h2>Need a dependable junior developer with solid fundamentals?</h2>
+                <p>Reach out and tell me what you’re building.</p>
+            </div>
+            <button class="button button-primary" type="button" data-open-contact>Contact Isaac</button>
         </div>
-        
-        <!-- Footer section -->
-        <footer>
-                <p class="center">Isaac Vazquez III <a href="mailto:mrisaacvazquez@gmail.com" target="_blank">mrisaacvazquez@gmail.com</a></p><br>
-        </footer>
-        <script src="JS/sample_portfolio.js"></script>
-    </body>
+    </section>
+
+    <div class="contact-modal" id="contact-modal" aria-hidden="true">
+        <div class="contact-backdrop" data-close-contact></div>
+        <div class="contact-panel" role="dialog" aria-modal="true" aria-labelledby="contact-title">
+            <button class="modal-close" type="button" aria-label="Close contact form"
+                data-close-contact>&times;</button>
+            <h2 id="contact-title">Let’s talk</h2>
+            <p class="contact-intro">Replace the Formspree action below with your own form endpoint before publishing.
+            </p>
+            <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required>
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" placeholder="Optional">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5"
+                    placeholder="Tell me a little about your project."></textarea>
+
+                <div class="form-actions">
+                    <button class="button button-primary" type="submit">Send message</button>
+                    <a class="button button-secondary" href="mailto:mrisaacvazquez@gmail.com">Email directly</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>Isaac Vazquez III</p>
+            <a href="mailto:mrisaacvazquez@gmail.com">mrisaacvazquez@gmail.com</a>
+            <p>&copy; <span id="year"></span> All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
 </html>
