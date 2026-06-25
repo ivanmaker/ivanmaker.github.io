@@ -1,8 +1,34 @@
-# ivanmaker.github.io
-Portfolio Site
+# Isaac Vazquez III Portfolio Site
 
-Versatile technology professional with a unique background spanning agriculture, formal computer science education, and network operations leadership. Proven ability to rapidly master complex technical systems, adapt to new environments, and drive innovative solutions. Demonstrated track record of transitioning successfully between vastly different industries while maintaining high performance standards. Seeking to leverage strong analytical skills, creative problem-solving abilities, and thoughtful collaboration in a technical role
+A static portfolio site for Isaac Vazquez III, focused on junior front-end and full-stack web development roles.
 
-I am a graduate of University of Massachusetts Lowell (BS - Info Tech) The Tech Academy’s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more.
+## Current Positioning
 
-I am a full-stack developer and would love to work with you on your project.
+The site presents Isaac as a JavaScript/TypeScript web developer with a React job-market focus, meaningful Angular/MEAN experience, and practical backend/API exposure through Node, Express, MongoDB, SQL, REST APIs, and GitHub-based project work.
+
+## Featured Projects
+
+- [Social Media App - MEAN](https://github.com/ivanmaker/Social-Media-App-MEAN)
+- [Todo App - MERN](https://github.com/ivanmaker/Todo-App-MERN)
+- [Connect Four Game](https://github.com/ivanmaker/Connect-Four-Game)
+- [Book Database Project](https://github.com/ivanmaker/Book-Database-Project)
+
+## Structure
+
+```txt
+ivanmaker.github.io/
+  index.html
+  css/
+    style.css
+  js/
+    main.js
+  images/
+```
+
+## Contact Form
+
+The contact form currently uses Formspree. Before treating the site as production-ready, confirm that the Formspree endpoint in `index.html` belongs to the correct account and successfully delivers messages.
+
+## Deployment Notes
+
+This site can run as a GitHub Pages site because it is static HTML/CSS/JavaScript. It could also be deployed through a static hosting provider such as Netlify or Vercel if you want a more conventional deployment dashboard, preview deployments, or custom domain workflow.
