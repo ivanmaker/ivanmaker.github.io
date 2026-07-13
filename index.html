@@ -1,461 +1,283 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Portfolio site for Isaac Vazquez III, a junior web developer focused on React, TypeScript, Angular, and practical full-stack JavaScript applications."
-    />
-    <title>Isaac Vazquez III | Junior Web Developer</title>
-    <link rel="icon" type="image/png" href="images/icon.png" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Isaac Vazquez III — full-stack web developer portfolio featuring React, Angular, TypeScript, Node.js, Express, MongoDB, and practical production troubleshooting.">
+  <title>Isaac Vazquez III | Full-Stack Web Developer</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <body>
-    <header class="site-header" id="top">
-      <nav class="navbar container" aria-label="Primary navigation">
-        <a class="brand" href="#home">Isaac Vazquez III</a>
-        <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#github">GitHub</a>
-          <button class="nav-contact" type="button" data-open-contact>
-            Contact
-          </button>
-        </div>
-      </nav>
-    </header>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="wordmark" href="#top" aria-label="Isaac Vazquez III home">
+        <span class="wordmark-mark">IV</span>
+        <span>Isaac Vazquez III</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a href="resume.html">Resume</a>
+        <a class="nav-cta" href="mailto:mrisaacvazquez@gmail.com">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-    <main>
-      <section class="hero" id="home">
-        <video
-          class="hero-video"
-          autoplay
-          muted
-          loop
-          playsinline
-          aria-hidden="true"
-        >
-          <source src="images/video/trees-background.mp4" type="video/mp4" />
-        </video>
-        <div class="hero-overlay"></div>
-
-        <div class="hero-content container">
-          <p class="eyebrow">Junior web developer</p>
-          <h1>
-            Frontend-focused developer with React and Angular/full-stack
-            experience.
-          </h1>
-          <p class="hero-copy">
-            I'm Isaac Vazquez III, a web developer focused on JavaScript,
-            TypeScript, and modern web app structure. React is my current
-            job-market focus, while Angular is where I have done some of my
-            deepest framework work so far. I like building clear interfaces,
-            tracing bugs across the stack, and turning rough project
-            requirements into working software.
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Full-stack web developer · Portland, Oregon</p>
+          <h1>I build practical web applications and solve the problems between the layers.</h1>
+          <p class="hero-lede">
+            React and TypeScript are my current focus, supported by hands-on experience with Angular,
+            Node.js, Express, MongoDB, REST APIs, and seven years leading technical operations.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#projects"
-              >View project work</a
-            >
-            <button
-              class="button button-secondary"
-              type="button"
-              data-open-contact
-            >
-              Get in touch
-            </button>
+            <a class="button button-primary" href="#projects">View selected work</a>
+            <a class="button button-secondary" href="resume.html">View resume</a>
           </div>
-          <ul class="hero-highlights" aria-label="Highlights">
-            <li>React + TypeScript job-market focus</li>
-            <li>Angular / MEAN app experience</li>
-            <li>IT operations and team leadership background</li>
+          <ul class="signal-list" aria-label="Professional highlights">
+            <li>B.S. Information Technology</li>
+            <li>Full-stack JavaScript bootcamp</li>
+            <li>25-person technical team leadership</li>
           </ul>
         </div>
-      </section>
 
-      <section class="section" id="about">
-        <div class="container two-column">
-          <div class="content-card">
-            <p class="section-label">About me</p>
-            <h2>
-              A grounded career-changer who knows how to troubleshoot messy
-              systems.
-            </h2>
-            <p>
-              I'm nearing completion of The Tech Academy's JavaScript Developer
-              Boot Camp, where I've built projects across front-end frameworks,
-              REST APIs, databases, authentication, and full-stack app
-              structure. My current target is front-end or full-stack web
-              development. React and TypeScript are the lane I'm prioritizing
-              for job readiness, while Angular has helped me build a stronger
-              mental model for structured frontend applications.
-            </p>
-            <p>
-              Before coding full time, I worked in IT operations and leadership,
-              including triage, customer communication, process improvement, and
-              managing a support team. That background helps me stay calm when a
-              bug crosses layers: browser, component, service, route,
-              controller, database, environment, or deployment.
-            </p>
-            <p>
-              I also spent years doing hands-on agricultural work and creative
-              work in ceramics. That mix keeps me practical: I care about code
-              that works, interfaces that make sense, and teams that can
-              communicate clearly while solving real problems.
-            </p>
-          </div>
-          <div class="portrait-card">
-            <img src="images/Isaac.jpg" alt="Portrait of Isaac Vazquez III" />
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-muted" id="skills">
-        <div class="container">
-          <p class="section-label center-text">What I bring</p>
-          <h2 class="section-title center-text">
-            Junior developer skills with a full-stack mental model.
-          </h2>
-          <div class="skill-grid skill-grid-expanded">
-            <article class="info-card">
-              <h3>Front-end development</h3>
-              <p>
-                Responsive layouts, semantic HTML, organized CSS, JavaScript
-                interactions, component-based UI work, and growing
-                React/TypeScript depth.
-              </p>
-            </article>
-            <article class="info-card">
-              <h3>Full-stack fundamentals</h3>
-              <p>
-                Practical experience with Node, Express, REST routes,
-                controllers, MongoDB, SQL, CRUD apps, authentication flow, and
-                API testing.
-              </p>
-            </article>
-            <article class="info-card">
-              <h3>Debugging across layers</h3>
-              <p>
-                Comfortable tracing issues from the browser through services,
-                backend routes, database calls, environment variables, and
-                project configuration.
-              </p>
-            </article>
-            <article class="info-card">
-              <h3>Professional communication</h3>
-              <p>
-                Prior IT operations and team leadership experience with
-                technical triage, stakeholder communication, documentation, and
-                steady problem-solving under pressure.
-              </p>
-            </article>
-          </div>
-
-          <div class="stack-panel" aria-label="Current technical focus">
-            <h3>Current technical focus</h3>
-            <ul class="stack-list">
-              <li>React</li>
-              <li>Angular</li>
-              <li>TypeScript</li>
-              <li>JavaScript</li>
-              <li>HTML</li>
-              <li>CSS / SCSS</li>
-              <li>Node.js</li>
-              <li>Express</li>
-              <li>MongoDB</li>
-              <li>SQL</li>
-              <li>Git / GitHub</li>
-              <li>REST APIs</li>
-              <li>Postman</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="projects">
-        <div class="container">
-          <div class="section-header">
+        <aside class="hero-panel" aria-label="Technical profile">
+          <p class="panel-label">Current positioning</p>
+          <h2>Frontend-minded. Full-stack capable. Production tested.</h2>
+          <div class="stack-groups">
             <div>
-              <p class="section-label">Selected project work</p>
-              <h2>Recent builds that show the direction I'm moving.</h2>
+              <span>Frontend</span>
+              <p>React · TypeScript · Angular · HTML · CSS · Bootstrap</p>
             </div>
-            <p class="section-intro">
-              These projects represent bootcamp and independent practice work.
-              The emphasis is on building, debugging, and understanding how the
-              pieces fit together.
-            </p>
-          </div>
-
-          <div class="project-grid">
-            <article class="project-card featured-project">
-              <p class="project-type">Angular / MEAN</p>
-              <h3>Social Media App</h3>
-              <p>
-                A social-media-style MEAN application with an Angular frontend,
-                Express/Node backend, MongoDB persistence, post CRUD,
-                pagination, authentication flow, and Angular Material UI work.
-              </p>
-              <ul>
-                <li>
-                  Worked with Angular components, services, routing, HttpClient,
-                  RxJS, and interceptors.
-                </li>
-                <li>
-                  Connected frontend post management to Express routes,
-                  controllers, middleware, and MongoDB models.
-                </li>
-                <li>
-                  Debugged auth headers, pagination counts, request flow, and
-                  error handling across the stack.
-                </li>
-              </ul>
-              <div class="project-actions">
-                <a
-                  class="button button-secondary"
-                  href="https://github.com/ivanmaker/Social-Media-App-MEAN"
-                  target="_blank"
-                  rel="noreferrer"
-                  >View code</a
-                >
-              </div>
-            </article>
-
-            <article class="project-card featured-project">
-              <p class="project-type">React / MERN</p>
-              <h3>Todo App</h3>
-              <p>
-                A full-stack todo/task application with a React frontend,
-                Express API, MongoDB/Mongoose data model, and separate
-                frontend/backend project structure.
-              </p>
-              <ul>
-                <li>
-                  Built todo task create, read, update, and delete behavior across
-                  frontend and backend apps.
-                </li>
-                <li>
-                  Used Axios to connect React UI actions to Express routes and
-                  MongoDB operations.
-                </li>
-                <li>
-                  Practiced debugging the full request path from browser event
-                  to API response.
-                </li>
-              </ul>
-              <div class="project-actions">
-                <a
-                  class="button button-secondary"
-                  href="https://github.com/ivanmaker/Todo-App-MERN"
-                  target="_blank"
-                  rel="noreferrer"
-                  >View code</a
-                >
-              </div>
-            </article>
-
-            <article class="project-card featured-project">
-              <p class="project-type">React / TypeScript</p>
-              <h3>Connect Four Game</h3>
-              <p>
-                A browser-based Connect Four project focused on React component
-                structure, TypeScript, game state, event handling, dynamic
-                rendering, and interactive UI behavior.
-              </p>
-              <ul>
-                <li>
-                  Worked through component responsibilities for the app, board,
-                  columns, and tiles.
-                </li>
-                <li>
-                  Practiced reasoning about state updates, player turns, render
-                  flow, and typed props.
-                </li>
-                <li>
-                  Extended the project with click sound behavior while learning
-                  React project structure.
-                </li>
-              </ul>
-              <div class="project-actions">
-                <a
-                  class="button button-secondary"
-                  href="https://github.com/ivanmaker/Connect-Four-Game"
-                  target="_blank"
-                  rel="noreferrer"
-                  >View code</a
-                >
-              </div>
-            </article>
-
-            <article class="project-card featured-project">
-              <p class="project-type">Node / Express / MongoDB</p>
-              <h3>Book Database API</h3>
-              <p>
-                A REST-style Express/MongoDB book API with
-                route/controller/model organization, CRUD endpoints, query
-                filtering, HATEOAS-style response links, and automated test
-                practice.
-              </p>
-              <ul>
-                <li>
-                  Implemented API routes for creating, reading, updating,
-                  partially updating, and deleting books.
-                </li>
-                <li>
-                  Added filtering links and practiced clear request/response
-                  behavior with status codes.
-                </li>
-                <li>
-                  Worked with Mocha, Should, Sinon, and Supertest while
-                  debugging controller behavior.
-                </li>
-              </ul>
-              <div class="project-actions">
-                <a
-                  class="button button-secondary"
-                  href="https://github.com/ivanmaker/Book-Database-Project"
-                  target="_blank"
-                  rel="noreferrer"
-                  >View code</a
-                >
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-muted" id="github">
-        <div class="container github-layout">
-          <div class="content-card">
-            <p class="section-label">GitHub</p>
-            <h2>See the code and the learning trail.</h2>
-            <p>
-              My GitHub shows my progression through web development: frontend
-              projects, API work, database practice, framework exercises, and
-              the debugging lessons that come from getting real projects out of
-              tutorial mode.
-            </p>
-            <p>
-              I'm aiming for junior front-end or full-stack roles where I can
-              contribute, learn from an engineering team, and keep building
-              deeper React, TypeScript, Angular, and full-stack JavaScript
-              application skills.
-            </p>
-            <div class="github-actions">
-              <a
-                class="button button-primary"
-                href="https://github.com/ivanmaker"
-                target="_blank"
-                rel="noreferrer"
-                >Open GitHub profile</a
-              >
-              <a
-                class="button button-secondary"
-                href="https://github.com/ivanmaker/Social-Media-App-MEAN"
-                target="_blank"
-                rel="noreferrer"
-                >Featured MEAN app</a
-              >
+            <div>
+              <span>Backend</span>
+              <p>Node.js · Express · REST APIs · JWT · Mongoose</p>
+            </div>
+            <div>
+              <span>Data & tools</span>
+              <p>MongoDB · MySQL · Git · GitHub · Postman</p>
             </div>
           </div>
-          <div class="image-stack">
-            <img src="images/wTilda.jpg" alt="Isaac with his cat Tilda" />
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <section class="contact-strip">
-      <div class="container contact-strip-inner">
-        <div>
-          <p class="section-label">Contact</p>
-          <h2>Looking for a dependable junior web developer?</h2>
-          <p>
-            Reach out if you need someone who can build, debug, communicate, and
-            keep learning.
-          </p>
-        </div>
-        <button class="button button-primary" type="button" data-open-contact>
-          Contact Isaac
-        </button>
+        </aside>
       </div>
     </section>
 
-    <div class="contact-modal" id="contact-modal" aria-hidden="true">
-      <div class="contact-backdrop" data-close-contact></div>
-      <div
-        class="contact-panel"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="contact-title"
-      >
-        <button
-          class="modal-close"
-          type="button"
-          aria-label="Close contact form"
-          data-close-contact
-        >
-          &times;
-        </button>
-        <h2 id="contact-title">Let's talk</h2>
-        <form
-          action="https://formspree.io/f/mqegkala"
-          method="POST"
-          class="contact-form"
-        >
-          <label for="name">Name</label>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            placeholder="Your name"
-            required
-          />
-
-          <label for="email">Email</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            placeholder="you@example.com"
-            required
-          />
-
-          <label for="phone">Phone</label>
-          <input id="phone" name="phone" type="tel" placeholder="Optional" />
-
-          <label for="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            placeholder="Tell me a little about the role, team, or project."
-          ></textarea>
-
-          <div class="form-actions">
-            <button class="button button-primary" type="submit">
-              Send message
-            </button>
-            <a
-              class="button button-secondary"
-              href="mailto:mrisaacvazquez@gmail.com"
-              >Email directly</a
-            >
+    <section class="section section-dark" id="projects">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Selected projects</p>
+            <h2>Evidence of how I build, debug, and finish.</h2>
           </div>
-        </form>
+          <p>
+            Each project is presented as a small case study: what it does, what I owned, and what the work demonstrates.
+          </p>
+        </div>
+
+        <div class="project-list">
+          <article class="project-card project-featured">
+            <div class="project-media">
+              <img src="assets/projects/winlock-placeholder.svg" alt="Placeholder for a Winlock Tourism Website screenshot or GIF">
+              <span class="media-note">Replace with screenshot or GIF</span>
+            </div>
+            <div class="project-copy">
+              <p class="project-number">01 · Final bootcamp project</p>
+              <h3>Winlock Tourism Website</h3>
+              <p class="project-summary">
+                A full-stack, database-backed travelogue for Winlock, Washington, built from an initial static Angular concept into a reusable content system.
+              </p>
+              <ul class="project-points">
+                <li>Created reusable Angular components and route-driven pages.</li>
+                <li>Built Express endpoints backed by MongoDB Atlas and Mongoose.</li>
+                <li>Resolved deployment, asset-path, routing, data-shape, and async rendering failures.</li>
+              </ul>
+              <div class="tag-row" aria-label="Technologies">
+                <span>Angular</span><span>TypeScript</span><span>Node.js</span><span>Express</span><span>MongoDB</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/ivanmaker" target="_blank" rel="noreferrer">GitHub profile</a>
+                <span class="link-muted">Add repository/live link</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/projects/social-placeholder.svg" alt="Placeholder for a Social Media App screenshot or GIF">
+              <span class="media-note">Replace with screenshot or GIF</span>
+            </div>
+            <div class="project-copy">
+              <p class="project-number">02 · Full-stack application</p>
+              <h3>Social Media App — MEAN</h3>
+              <p class="project-summary">
+                A social-media-style application with authentication, post CRUD, pagination, services, interceptors, and Angular Material interface work.
+              </p>
+              <div class="tag-row"><span>Angular</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>JWT</span></div>
+              <div class="project-links">
+                <a href="https://github.com/ivanmaker/Social-Media-App-MEAN" target="_blank" rel="noreferrer">View repository</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/projects/todo-placeholder.svg" alt="Placeholder for a MERN Todo App screenshot or GIF">
+              <span class="media-note">Replace with screenshot or GIF</span>
+            </div>
+            <div class="project-copy">
+              <p class="project-number">03 · API integration</p>
+              <h3>Todo App — MERN</h3>
+              <p class="project-summary">
+                A CRUD task application connecting a React frontend to an Express API and MongoDB database through a separated frontend/backend structure.
+              </p>
+              <div class="tag-row"><span>React</span><span>JavaScript</span><span>Express</span><span>MongoDB</span></div>
+              <div class="project-links">
+                <a href="https://github.com/ivanmaker/Todo-App-MERN" target="_blank" rel="noreferrer">View repository</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/projects/connect-four-placeholder.svg" alt="Placeholder for a Connect Four Game screenshot or GIF">
+              <span class="media-note">Replace with screenshot or GIF</span>
+            </div>
+            <div class="project-copy">
+              <p class="project-number">04 · Frontend application</p>
+              <h3>Connect Four Game</h3>
+              <p class="project-summary">
+                An interactive browser game emphasizing typed component boundaries, state updates, event handling, dynamic rendering, and audio feedback.
+              </p>
+              <div class="tag-row"><span>React</span><span>TypeScript</span><span>CSS</span></div>
+              <div class="project-links">
+                <a href="https://github.com/ivanmaker/Connect-Four-Game" target="_blank" rel="noreferrer">View repository</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/projects/books-placeholder.svg" alt="Placeholder for a Book Database API diagram or screenshot">
+              <span class="media-note">Replace with API screenshot or diagram</span>
+            </div>
+            <div class="project-copy">
+              <p class="project-number">05 · Backend and testing</p>
+              <h3>Book Database REST API</h3>
+              <p class="project-summary">
+                A structured Express and MongoDB API with CRUD endpoints, query filtering, HATEOAS-style links, and automated unit and integration testing.
+              </p>
+              <div class="tag-row"><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Mocha</span><span>Supertest</span></div>
+              <div class="project-links">
+                <a href="https://github.com/ivanmaker/Book-Database-Project" target="_blank" rel="noreferrer">View repository</a>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="shell experience-grid">
+        <div>
+          <p class="eyebrow">Professional experience</p>
+          <h2>Software is a transition. Technical problem-solving is not.</h2>
+          <p class="section-intro">
+            My previous work supplies the parts junior candidates often have not yet developed:
+            production judgment, incident ownership, communication, and team leadership.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <span>2019–Present</span>
+              <span>Cook Solutions Group</span>
+            </div>
+            <h3>Network Operations Center ATM Supervisor</h3>
+            <ul>
+              <li>Lead and mentor a 25-person technical operations team supporting ATM infrastructure.</li>
+              <li>Investigate complex production incidents affecting financial transaction systems.</li>
+              <li>Improve workflows, support system integrations, and translate technical issues across teams.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <span>2007–2018</span>
+              <span>Rising River Farm</span>
+            </div>
+            <h3>Assistant Field Manager</h3>
+            <ul>
+              <li>Supervised seasonal teams of 10–15 employees.</li>
+              <li>Coordinated infrastructure projects, logistics, and changing operational priorities.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="about">
+      <div class="shell about-grid">
+        <div>
+          <p class="eyebrow">About the transition</p>
+          <h2>A deliberate move into software engineering.</h2>
+        </div>
+        <div class="about-copy">
+          <p>
+            I completed a B.S. in Information Technology with a Java concentration, then returned to structured
+            training through The Tech Academy’s full-stack JavaScript program. The bootcamp converted earlier
+            academic foundations into current, practical experience across frontend applications, APIs, databases,
+            authentication, testing, and deployment.
+          </p>
+          <p>
+            I am targeting junior frontend and full-stack JavaScript roles, with React and TypeScript as my primary
+            direction. My strongest differentiator is not a claim of seniority; it is the combination of current
+            hands-on development work with mature technical leadership and a systematic debugging mindset.
+          </p>
+          <div class="education-row">
+            <div>
+              <strong>The Tech Academy</strong>
+              <span>Full-Stack JavaScript Web Development · 2026</span>
+            </div>
+            <div>
+              <strong>University of Massachusetts Lowell</strong>
+              <span>B.S. Information Technology · Java concentration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="shell cta-inner">
+        <div>
+          <p class="eyebrow">Next step</p>
+          <h2>Looking for a developer who can learn quickly and operate responsibly?</h2>
+        </div>
+        <div class="cta-actions">
+          <a class="button button-primary" href="mailto:mrisaacvazquez@gmail.com">Email Isaac</a>
+          <a class="button button-secondary" href="resume.html">Open resume</a>
+          <a class="text-link" href="https://github.com/ivanmaker" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a class="text-link" href="https://linkedin.com/in/isaacvazqueziii" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <span>Isaac Vazquez III</span>
+      <span>Full-Stack Web Developer</span>
+      <span>© <span data-year></span></span>
     </div>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>Isaac Vazquez III</p>
-        <a href="mailto:mrisaacvazquez@gmail.com">mrisaacvazquez@gmail.com</a>
-        <p>&copy; <span id="year"></span> All rights reserved.</p>
-      </div>
-    </footer>
-
-    <script src="js/main.js"></script>
-  </body>
+  </footer>
+</body>
 </html>

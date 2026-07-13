@@ -1,71 +1,57 @@
-# Isaac Vazquez III Portfolio Site
+# Isaac Vazquez Portfolio + Resume
 
-A static portfolio site for Isaac Vazquez III, a junior web developer focused on JavaScript, TypeScript, React, Angular, and practical full-stack web development.
+This package treats the portfolio and resume as one connected professional system.
 
-The site highlights selected project work from my JavaScript Developer bootcamp and related practice projects, with an emphasis on frontend development, API-driven applications, full-stack debugging, and clear technical communication.
+## Files
 
-## Live Site
+- `index.html` — portfolio landing page
+- `resume.html` — browser-based one-page resume with print/PDF styling
+- `styles.css` — shared visual system for both pages
+- `script.js` — mobile navigation, current year, and resume print action
+- `assets/projects/` — project media placeholders
 
-[View the portfolio site](https://ivanmaker.github.io)
+## Project images and GIFs
 
-## Current Focus
+Replace the SVG placeholder files in `assets/projects/` with your own screenshots or GIFs.
 
-I am currently focusing on React and TypeScript because they are common requirements for frontend web development roles. I also have meaningful Angular experience from building a larger MEAN-stack application, and I am comfortable working across the frontend/backend boundary.
+You can either:
 
-My current job target is a junior frontend or full-stack web developer role where I can keep building practical experience with:
+1. Keep the existing filenames and overwrite each placeholder, or
+2. Change the `src` value in `index.html`.
 
-* React
-* TypeScript
-* Angular
-* JavaScript
-* HTML
-* CSS / SCSS
-* Node.js
-* Express
-* MongoDB
-* SQL
-* REST APIs
-* Git / GitHub
+Recommended media:
 
-## Featured Projects
+- 1600 × 1000 screenshots for static images
+- GIFs under roughly 8–10 MB
+- Short, focused clips showing one meaningful interaction
+- Consistent aspect ratios across project cards
 
-### Social Media App - MEAN
+## Links to verify
 
-A social-media-style full-stack app built with Angular, Node, Express, MongoDB, and Mongoose. The project includes post CRUD, pagination, authentication flow, Angular services, interceptors, and Angular Material UI work.
+Before publishing:
 
-[View repository](https://github.com/ivanmaker/Social-Media-App-MEAN)
+- Replace the Winlock GitHub/live-demo placeholder links.
+- Confirm `https://ivanmaker.github.io` is the final portfolio URL.
+- Confirm every GitHub repository URL.
+- Add live demos where available.
+- Verify the LinkedIn URL.
+- Test the email and phone links.
 
-### Todo App - MERN
+## Resume workflow
 
-A full-stack todo/task application with a React frontend, Express backend, MongoDB database, and separate frontend/backend project structure.
+Open `resume.html` in a browser and select **Print / Save PDF**.
 
-[View repository](https://github.com/ivanmaker/Todo-App-MERN)
+The print stylesheet:
 
-### Connect Four Game
+- uses US Letter dimensions
+- removes the browser toolbar
+- removes the on-page resume controls
+- keeps the design to one page
 
-A browser-based Connect Four game built with React and TypeScript. The project focuses on component structure, state updates, event handling, typed props, and dynamic rendering.
+For the cleanest PDF export, disable browser headers and footers in the print dialog.
 
-[View repository](https://github.com/ivanmaker/Connect-Four-Game)
+## Deployment
 
-### Book Database Project
+Copy the files into the root of the `ivanmaker.github.io` repository and push to GitHub.
 
-A REST-style Express/MongoDB book API with route/controller/model organization, CRUD endpoints, query filtering, HATEOAS-style response links, and automated test practice.
-
-[View repository](https://github.com/ivanmaker/Book-Database-Project)
-
-## About the Site
-
-This portfolio is intentionally simple. It uses static HTML, CSS, and JavaScript rather than a framework so the site can be hosted easily and kept focused on the project work.
-
-The content is written to show where I am now as a developer: early-career, bootcamp-trained, strongest in practical debugging and full-stack mental models, and currently sharpening React/TypeScript while carrying forward Angular and backend/API experience.
-
-## Future Improvements
-
-* Add live demo links for selected frontend projects.
-* Add screenshots or short demo GIFs for project cards.
-* Add a custom domain.
-* Confirm and test the Formspree contact flow.
-* Consider rebuilding the portfolio in React after more React practice.
-* Add stronger accessibility checks and performance testing.
-* Add a downloadable resume link once the resume is ready.
-
+Because this is a static site, no build command is required.

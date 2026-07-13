@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+<title id="title">Winlock Tourism Website placeholder</title>
+<desc id="desc">Replace with project screenshot or demonstration GIF</desc>
+<rect width="1600" height="1000" fill="#e8ece6"/>
+<rect x="65" y="65" width="1470" height="870" rx="36" fill="#fdfbf5" stroke="#173f31" stroke-width="5"/>
+<rect x="105" y="105" width="1390" height="90" rx="20" fill="#173f31"/>
+<circle cx="160" cy="150" r="14" fill="#a8bcae"/><circle cx="205" cy="150" r="14" fill="#8ca678"/><circle cx="250" cy="150" r="14" fill="#8ca678"/>
+<rect x="110" y="245" width="850" height="48" rx="14" fill="#173f31" opacity=".92"/>
+<rect x="110" y="325" width="1180" height="26" rx="10" fill="#a8bcae"/>
+<rect x="110" y="372" width="1040" height="26" rx="10" fill="#c3cdc4"/>
+<rect x="110" y="445" width="650" height="370" rx="28" fill="#8ca678" opacity=".85"/>
+<rect x="805" y="445" width="690" height="70" rx="18" fill="#173f31" opacity=".9"/>
+<rect x="805" y="550" width="610" height="25" rx="9" fill="#a8bcae"/>
+<rect x="805" y="595" width="540" height="25" rx="9" fill="#c3cdc4"/>
+<rect x="805" y="675" width="210" height="65" rx="32" fill="#173f31"/>
+<text x="110" y="885" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#173f31">Winlock Tourism Website</text>
+<text x="110" y="925" font-family="Arial, sans-serif" font-size="24" fill="#48574f">Replace with project screenshot or demonstration GIF</text>
+</svg>
