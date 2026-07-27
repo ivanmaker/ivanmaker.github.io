@@ -14,7 +14,7 @@
   --line: rgba(45, 88, 115, .18);
   --shadow: 0 24px 70px rgba(1, 22, 64, .18);
   --radius: 24px;
-  --shell: 1180px;
+  --shell: 1500px;
 }
 
 * { box-sizing: border-box; }
@@ -23,7 +23,7 @@ body {
   margin: 0;
   color: var(--ink);
   background: var(--paper);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Noto Sans", sans-serif;
   line-height: 1.6;
 }
 a { color: inherit; }
@@ -55,7 +55,7 @@ button { font: inherit; }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(100px, .65fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; }
 .eyebrow { margin: 0 0 .8rem; color: var(--ochre); text-transform: uppercase; letter-spacing: .16em; font-size: .78rem; font-weight: 800; }
 .hero h1, .section-heading h2, .experience-grid h2, .about-grid h2, .cta h2 {
-  margin: 0; font-family: Georgia, "Times New Roman", serif; font-weight: 500; line-height: 1.04; letter-spacing: -.035em;
+  margin: 0; font-family: "Noto Serif", serif; font-weight: 500; line-height: 1.04; letter-spacing: -.035em;
 }
 .hero h1 { font-size: clamp(3rem, 6.6vw, 6.6rem); max-width: 12ch; }
 .hero-lede { max-width: 65ch; margin: 1.5rem 0 0; font-size: clamp(1.05rem, 1.8vw, 1.28rem); color: var(--ink-soft); }
@@ -69,7 +69,7 @@ button { font: inherit; }
 
 .hero-panel { background: var(--wave-deep); color: var(--surface); border-radius: var(--radius); padding: clamp(1.5rem, 3vw, 2.4rem); box-shadow: var(--shadow); }
 .panel-label { margin: 0 0 1rem; text-transform: uppercase; letter-spacing: .14em; font-weight: 800; font-size: .72rem; color: var(--sand); }
-.hero-panel h2 { margin: 0; font-family: Georgia, serif; font-weight: 500; font-size: clamp(1.9rem, 3vw, 2.8rem); line-height: 1.06; }
+.hero-panel h2 { margin: 0; font-family: "Noto Serif", serif;; font-weight: 500; font-size: clamp(1.9rem, 3vw, 2.8rem); line-height: 1.06; }
 .stack-groups { margin-top: 2rem; display: grid; gap: 1.15rem; }
 .stack-groups div { border-top: 1px solid rgba(252, 251, 246, .22); padding-top: .9rem; }
 .stack-groups span { color: var(--seafoam); text-transform: uppercase; letter-spacing: .12em; font-size: .7rem; font-weight: 800; }
@@ -89,7 +89,7 @@ button { font: inherit; }
 .media-note { position: absolute; left: 1rem; bottom: 1rem; padding: .45rem .7rem; border-radius: 999px; background: rgba(1, 22, 64, .88); color: var(--surface); font-size: .72rem; font-weight: 750; }
 .project-copy { padding: clamp(1.25rem, 3vw, 2rem); }
 .project-number { margin: 0 0 .8rem; color: var(--ochre); text-transform: uppercase; letter-spacing: .12em; font-size: .72rem; font-weight: 800; }
-.project-card h3 { margin: 0; font-family: Georgia, serif; font-weight: 500; font-size: clamp(1.6rem, 3vw, 2.65rem); line-height: 1.06; }
+.project-card h3 { margin: 0; font-family: "Noto Serif", serif;; font-weight: 500; font-size: clamp(1.6rem, 3vw, 2.65rem); line-height: 1.06; }
 .project-summary { color: #ece7d8; }
 .project-points { padding-left: 1.1rem; color: var(--surface); }
 .tag-row { display: flex; gap: .45rem; flex-wrap: wrap; margin-top: 1.2rem; }
@@ -130,7 +130,7 @@ button { font: inherit; }
 }
 .resume-header { display: grid; grid-template-columns: 1fr auto; gap: 1.5rem; padding-bottom: .18in; border-bottom: 3px solid var(--wave); }
 .resume-kicker { margin: 0; text-transform: uppercase; letter-spacing: .15em; color: var(--ochre); font-size: 9pt; font-weight: 850; }
-.resume-header h1 { margin: .03in 0; font-family: Georgia, serif; font-size: 28pt; font-weight: 500; letter-spacing: -.03em; line-height: 1; }
+.resume-header h1 { margin: .03in 0; font-family: "Noto Serif", serif; font-size: 28pt; font-weight: 500; letter-spacing: -.03em; line-height: 1; }
 .resume-positioning { margin: 0; color: var(--ink-soft); font-size: 9.5pt; font-weight: 700; }
 .resume-contact { display: grid; justify-items: end; align-content: start; font-style: normal; font-size: 8.2pt; line-height: 1.35; }
 .resume-contact a { text-decoration: none; }
