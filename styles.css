@@ -14,7 +14,7 @@
   --line: rgba(45, 88, 115, .18);
   --shadow: 0 24px 70px rgba(1, 22, 64, .18);
   --radius: 24px;
-  --shell: 1500px;
+  --shell: 1350px;
 }
 
 * { box-sizing: border-box; }
